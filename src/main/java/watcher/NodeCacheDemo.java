@@ -29,6 +29,7 @@ public class NodeCacheDemo {
 		      .withMode(CreateMode.EPHEMERAL)
 		      .forPath(path, "init".getBytes());
 	    final NodeCache cache = new NodeCache(client,path,false);
+		System.out.println("1");
 	    // 开启对/zk/nodecache节点的监听
 		cache.start(true);
 		// 添加监听的回调方法
